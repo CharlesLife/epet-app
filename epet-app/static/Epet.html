@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html class="website_dog">
+<head>
+<title>epet</title>
+<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1,minimum-scale=1, user-scalable=no,viewport-fit=cover">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="./css/reset.css">
+</head>
+<body>
+<div class="overflow xiazaiApp">
+    <div class="overflow rela">
+        <span class="clsoebtn">
+          <img id="close_down_bar" src="./img/close3.png"/>
+        </span>
+        <div class="appdowimg">
+            <a href="" style="display: block;">
+                <img src="./img/c63b6e6cf483cbb61196f658920a9d6e.jpg" />
+            </a>
+        </div>
+    </div>
+</div>
+<div class="wap-top-bar hide">
+<header class="ftc head-top bgfff zcolor rela">
+    <div class="">
+        <a href="javascript:void(0)" class="aback page-top go-back"></a>
+        <span class="ft18 topbar-title">epet</span>
+        <div class="zfont ft16 block">
+            <a class="zcolor topbar-link "></a>
+        </div>
+        <span class="mla pull-right Jbur ml J_bur"></span>
+    </div>
+</header>
+<div class="header-quick header-quicknew  hide Jtk">
+<a href="https://wap.epet.com/main.html?pet_type=dog">
+    <span class="icon1"></span>
+    <p>首页</p>
+</a>
+<a href="https://wap.epet.com/category.html">
+    <span class="icon2"></span>
+    <p>商品分类</p>
+</a>
+<a href="https://wap.epet.com/cart/">
+<span class="icon4" id="getCartNum"><em>0</em></span>
+<p>购物车</p>
+</a>
+<a href="https://wap.epet.com/user/UserCenter.html">
+<span class="icon5"></span>
+<p>我的e宠</p>
+</a>
+</div>
+</div>
+<div id="indexbox" class="main" v-cloak>
+<div class="indexheader">
+<div class="indexnavcon">
+<div class="headerbox float-div">
+<div class="main">
+<div class="clearfix pt5 pl10 pr10 pb5">
+<div class="epet-search bgf">
+<div class="fl rela ft14 location">
+<a href="">
+<span class="catordog c89"></span>
+<span class="c89">|</span>
+<span data-name="my-place" class="myposition c89 ft13">重庆</span>
+<i></i>
+</a>
+</div>
+<p class="search-text">
+<a href="">
+<input type="search" placeholder="搜索商品和品牌" disabled="">
+<span class="eico serach-ico"></span>
+</a>
+</p>
+<a href='' class="epet-category">
+<img src="">
+</a>
+</div>
+</div>
+<div class="find_nav">
+<div class="find_nav_left dscroll">
+<div class="find_nav_list dscroll-div">
+<ul class="dscroll-ul">
+<li class="dscroll-li">
+<a href="">
+<span class="rela navimg" >
+<span >
+<img src="" />
+</span>
+<span >
+<img src="" />
+</span>
+<i></i>
+</span>
+<span class="rela" ><span></span><i></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="switchtype">
+<div class="'go-dog pointer '+pet_type" ></div>
+<div class="changepop bgfff">
+<div class="cartc-bg db"></div>
+<div class="cartc-box rela overflow" style="overflow:hidden;display:block">
+<div class="main">
+<p class="ftc c999 ft16 rela"><b class="b-line c000 ft12">▁</b></p>
+<p class="ftc mt20 ft20 c666">亲爱的小主</p>
+<p class="ftc c333 ft20">您即将进入<span>[[petname]]</span></p>
+<ul class="clearfix ftc change-ul">
+<li class="fl pet1" type="" @click="gotype(this,pet1_name)">
+<img :src="shareurl + '/static_web/wap/src/images/change-'+[[pet1_name]]+'.png'"/>
+<div class="pet1name"></div>
+</li>
+<li class="'fl pet2 mainpet rela '+selecttypes" >
+<img src=""/>
+<div></div>
+<b class="current-line c000 ft12">▁</b>
+<a href="javascript:;"  class="cfff ft14 ftc once-into mt15 dib">立即进入</a>
+</li>
+<li class="fl pet3">
+<img src=""/>
+<div class="pet3name"></div>
+</li>
+</ul>
+</div>
+</div>
+<a class="cartc-close afff ft20 ftc c666" href="javascript:;" >
+<img src="">
+</a>
+</div>
+</div>
+</div>
+<div class="popup" >
+<div class="channel-adv" >
+<div class="content">
+<div class="pic">
+<a href="javascript:;" >
+<img class="img" /></a>
+</div>
+<div class="ckbtn ftc mt10">
+<img class="close" src=""/>
+</div>
+</div>
+</div>
+</div>
+<div class="fictitous hide"></div>
+<div class="allmodule module">
+<div v-for="item in alldatas">
+<div class="banner_item" >
+</div>
+<div class="xline" v-if="item.type==100">
+<div class="page-line"></div>
+</div>
+<div class="column_item" v-if="item.type==2">
+<colummenu-item v-if="item.is_dynamic==0" :columnmenudatas="item"></colummenu-item>
+<colummenu-item v-if="item.is_dynamic==1" :columnmenudatas="getDynamicdata[item.index]"></colummenu-item>
+</div>
+<div class="currency_ad" v-if="item.type==13">
+<currencyad-item v-if="item.is_dynamic==0" :currencyaddatas="item"></currencyad-item>
+<currencyad-item v-if="item.is_dynamic==1" :currencyaddatas="getDynamicdata[item.index]"></currencyad-item>
+</div>
+<div class="custom_tite pt10" v-if="item.type==21">
+<customtit-item v-if="item.is_dynamic==0" :customtitdatas="item"></customtit-item>
+<customtit-item v-if="item.is_dynamic==1" :customtitdatas="getDynamicdata[item.index]"></customtit-item>
+</div>
+<div class="ta_welfare" v-if="item.type==14">
+<charity-item v-if="item.is_dynamic==0" :charitydatas="item"></charity-item>
+<charity-item v-if="item.is_dynamic==1" :charitydatas="getDynamicdata[item.index]"></charity-item>
+</div>
+<div class="ad_goodslist" v-if="item.type==101">
+<adgoodslist-item v-if="item.is_dynamic==0" :adgoodslistdatas="item"></adgoodslist-item>
+<adgoodslist-item v-if="item.is_dynamic==1" :adgoodslistdatas="getDynamicdata[item.index]"></adgoodslist-item>
+</div>
+<div class="goodslist" v-if="item.type==12">
+<goodslist-item v-if="item.is_dynamic==0" :goodslistdatas="item"></goodslist-item>
+<goodslist-item v-if="item.is_dynamic==1" :goodslistdatas="getDynamicdata[item.index]"></goodslist-item>
+</div>
+<div class="columnnavdiv" v-if="item.type==3">
+<columnav-item v-if="item.is_dynamic==0" :clumenavdatas="item"></columnav-item>
+<columnav-item v-if="item.is_dynamic==1" :clumenavdatas="getDynamicdata[item.index]"></columnav-item>
+</div>
+<div class="switchable" v-if="item.type==102">
+<switchable-item v-if="item.is_dynamic==0" :switchabledatas="item"></switchable-item>
+<switchable-item v-if="item.is_dynamic==1" :switchabledatas="getDynamicdata[item.index]"></switchable-item>
+</div>
+<div class="picture_slider" v-if="item.type==15">
+<pslider-item v-if="item.is_dynamic==0" :psliderdatas="item"></pslider-item>
+<pslider-item v-if="item.is_dynamic==1" :psliderdatas="getDynamicdata[item.index]"></pslider-item>
+</div>
+<div class="surprise_day" v-if="item.type==8">
+<surprise-item v-if="item.is_dynamic==0" :surprisedatas="item"></surprise-item>
+<surprise-item v-if="item.is_dynamic==1" :surprisedatas="getDynamicdata[item.index]"></surprise-item>
+</div>
+<div class="judgediv" v-if="item.type==23">
+<judge-item v-if="item.is_dynamic==0" :judgedatas="item"></judge-item>
+<judge-item v-if="item.is_dynamic==1" :judgedatas="getDynamicdata[item.index]"></judge-item>
+</div>
+<div class="petknowdiv" v-if="item.type==16">
+<petknow-item v-if="item.is_dynamic==0" :petknowdatas="item"></petknow-item>
+<petknow-item v-if="item.is_dynamic==1" :petknowdatas="getDynamicdata[item.index]"></petknow-item>
+</div>
+<div class="videodiv" v-if="item.type==17">
+<video-item v-if="item.is_dynamic==0" :videodatas="item"></video-item>
+<video-item v-if="item.is_dynamic==1" :videodatas="getDynamicdata[item.index]"></video-item>
+</div>
+<div class="singlediv" v-if="item.type==7">
+<singlead-item v-if="item.is_dynamic==0" :singledatas="item"></singlead-item>
+<singlead-item v-if="item.is_dynamic==1" :singledatas="getDynamicdata[item.index]"></singlead-item>
+</div>
+<div class="prosinglediv" v-if="item.type==19">
+<prosingle-item v-if="item.is_dynamic==0" :prosingledatas="item"></prosingle-item>
+<prosingle-item v-if="item.is_dynamic==1" :prosingledatas="getDynamicdata[item.index]"></prosingle-item>
+</div>
+<div class="adprotraitdiv" v-if="item.type==22">
+<adprotrait-item v-if="item.is_dynamic==0" :adprotraitdatas="item"></adprotrait-item>
+<adprotrait-item v-if="item.is_dynamic==1" :adprotraitdatas="getDynamicdata[item.index]"></adprotrait-item>
+</div>
+<div class="fashion" v-if="item.type==104">
+<fashionvideo-item v-if="item.is_dynamic==0" :indexvideodatas="item"></fashionvideo-item>
+<fashionvideo-item v-if="item.is_dynamic==1" :indexvideodatas="getDynamicdata[item.index]"></fashionvideo-item>
+</div>
+<div class="fashionlist" v-if="item.type==105">
+<fashionlist-item v-if="item.is_dynamic==0" :fashionlistdatas="item"></fashionlist-item>
+<fashionlist-item v-if="item.is_dynamic==1" :fashionlistdatas="getDynamicdata[item.index]"></fashionlist-item>
+</div>
+<div class="wantbuy" v-if="item.type==11">
+<wantbuy-item v-if="item.is_dynamic==0" :wantbuydatas="item"></wantbuy-item>
+<wantbuy-item v-if="item.is_dynamic==1" :wantbuydatas="getDynamicdata[item.index]"></wantbuy-item>
+</div>
+<div class="brandtry" v-if="item.type==9">
+<brandtry-item v-if="item.is_dynamic==0" :brandtrydatas="item"></brandtry-item>
+<brandtry-item v-if="item.is_dynamic==1" :brandtrydatas="getDynamicdata[item.index]"></brandtry-item>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="wap-footer-bar hide">
+<div class="footer">
+<div class="ft">
+    <span class="bt" title="触屏版">触屏版</span>
+    <span><a href="">手机客户端</a></span>
+    <span><a href="">关于我们</a></span>
+    <span><a href="">联系我们</a></span>
+</div>
+<div style="text-align:center;margin:0 10px 0 10px; padding-bottom:25px; font-size:12px">&copy; wap.epet.com 版权：重庆易宠科技有限公司</div>
+</div>
+</div>
+<div class="footerdown hide">
+    <img class="close_img" src="">
+    <img class="newfooterdown_img" src="">
+    <span class="downtext">
+    <p class="c000 ft14">E宠商城</p>
+    <p class="c999 ft12">品质养宠，尽在E宠</p>
+    </span>
+    <a href="">
+    <span>下载</span>
+    </a>
+</div>
+<div class="footernav bottom_menu_bar bgfff bottomBox">
+    <ul class="clearfix footernav_ul bgfff">
+        <li class="index-a dogon"><a href="" class="db"></a></li>
+        <li class="type-a"><a href="" class="db"></a></li>
+        <li class="cart-a"><a href="" class="db"></a></li>
+        <li class="myepet-a"><a href="" class="db"></a></li>
+    </ul>
+</div>
+</body>
+<script type="text/javascript">
+  (function(){
+    var styleNode = document.createElement("style");
+    var width = document.documentElement.clientWidth/16;
+    styleNode.innerHTML="html{font-size:"+width+"px!important}";
+    document.head.appendChild(styleNode);
+  })()
+</script>
+</html>
